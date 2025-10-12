@@ -1,6 +1,6 @@
 <template>
   <div class="full-page base-full-page">
-    <Inactivate :font-color="inactivateFontColor" @show-history="showHistory" @new-chat="newChat" class="inactivate-container"/>
+<!--    <Inactivate :font-color="inactivateFontColor" @show-history="showHistory" @new-chat="newChat" class="inactivate-container"/>-->
   </div>
 </template>
 <script setup lang="ts">
@@ -46,7 +46,7 @@ const init = () => {
       clearInterval(sqlbot_embedded_timer)
     }
   }, 1000)
-  
+
 }
 const newChat = (param?: any) => {
   const handler = window.sqlbot_embedded_handler

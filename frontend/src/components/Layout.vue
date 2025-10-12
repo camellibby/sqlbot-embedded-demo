@@ -3,7 +3,7 @@ import { ref, computed } from 'vue'
 import { useRouter, useRoute, type RouteRecordRaw } from 'vue-router'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { useUserStore } from '@/store/user'
-import LoginPage from '../views/login/index.vue' 
+import LoginPage from '../views/login/index.vue'
 
 const userStore = useUserStore()
 
@@ -51,7 +51,7 @@ const handleCommand = async (command: string) => {
         <div class="header-content">
           <div class="logo">
             <img src="/logo.png" alt="Logo" />
-            <h1>嵌入式 Demo 系统</h1>
+            <h1>武汉理工产业集团智能助手</h1>
           </div>
           <div class="menu-section">
             <el-menu
@@ -72,18 +72,18 @@ const handleCommand = async (command: string) => {
                     </el-icon>
                     {{ route.meta?.title }}
                   </template>
-                  <el-menu-item 
-                    v-for="child in route.children" 
+                  <el-menu-item
+                    v-for="child in route.children"
                     :key="route.path + '/' + child.path"
                     :index="route.path + '/' + child.path"
                   >
                     {{ child.meta?.title }}
                   </el-menu-item>
                 </el-sub-menu>
-                
+
                 <!-- 没有子路由或只有一个子路由的菜单项 -->
-                <el-menu-item 
-                  v-else 
+                <el-menu-item
+                  v-else
                   :index="route.path"
                 >
                   <el-icon v-if="route.meta?.icon">
@@ -92,16 +92,16 @@ const handleCommand = async (command: string) => {
                   {{ route.meta?.title }}
                 </el-menu-item>
               </template>
-              
+
             </el-menu>
           </div>
           <div class="user-section">
             <el-dropdown @command="handleCommand" trigger="click">
               <div class="user-info">
-                <el-avatar 
-                  :size="36" 
+                <el-avatar
+                  :size="36"
                   src="/user.png"
-                  class="user-avatar" 
+                  class="user-avatar"
                 />
                 <span class="username">{{ userName || '游客' }}</span>
                 <el-icon class="el-icon--right"><CaretBottom /></el-icon>
@@ -124,7 +124,7 @@ const handleCommand = async (command: string) => {
           </div>
         </div>
       </el-header>
-      
+
       <el-main>
         <div class="main-content">
           <router-view :key="$route.fullPath"/>
@@ -270,15 +270,15 @@ const handleCommand = async (command: string) => {
   .logo h1 {
     display: none;
   }
-  
+
   .header-content {
     padding: 0 16px;
   }
-  
+
   .el-menu-item {
     padding: 0 12px;
   }
-  
+
   .username {
     display: none;
   }

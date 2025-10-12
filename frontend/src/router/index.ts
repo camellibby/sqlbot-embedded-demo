@@ -14,27 +14,8 @@ const settingStore = useSettingStore()
 const baseRoutes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: '/setting'
+    redirect: '/assistant/full'
   },
-  {
-    path: '/setting',
-    component: Layout,
-    meta: {
-      title: '系统设置',
-      icon: 'Setting'
-    },
-    children: [
-      {
-        path: '',
-        name: 'setting',
-        component: Setting
-      }
-    ]
-  }
-]
-
-// 动态路由配置
-const asyncRoutes: RouteRecordRaw[] = [
   {
     path: '/assistant',
     component: Layout,
@@ -62,6 +43,10 @@ const asyncRoutes: RouteRecordRaw[] = [
       }
     ]
   },
+]
+
+// 动态路由配置
+const asyncRoutes: RouteRecordRaw[] = [
   {
     path: '/advanced',
     component: Layout,
@@ -104,6 +89,22 @@ const asyncRoutes: RouteRecordRaw[] = [
         path: '',
         name: 'embedded',
         component: EmbeddedPage
+      }
+    ]
+  },
+  {
+    path: '/setting',
+    component: Layout,
+    meta: {
+      title: '系统设置',
+      icon: 'Setting',
+      requireOnline: true
+    },
+    children: [
+      {
+        path: '',
+        name: 'setting',
+        component: Setting
       }
     ]
   }
