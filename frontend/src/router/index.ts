@@ -47,51 +47,51 @@ const baseRoutes: RouteRecordRaw[] = [
 
 // 动态路由配置
 const asyncRoutes: RouteRecordRaw[] = [
-  {
-    path: '/advanced',
-    component: Layout,
-    meta: {
-      title: '高级小助手',
-      icon: 'DataLine',
-      requireAdvancedAssistant: true,
-      requireOnline: true
-    },
-    children: [
-      {
-        path: 'float',
-        name: 'advancedFloat',
-        meta: {
-          title: '浮窗嵌入'
-        },
-        component: AdvancedFloatPage
-      },
-      {
-        path: 'full',
-        name: 'advancedFull',
-        meta: {
-          title: '全屏嵌入'
-        },
-        component: AdvancedFullPage
-      }
-    ]
-  },
-  {
-    path: '/embedded',
-    meta: {
-      title: '页面嵌入',
-      icon: 'House',
-      requireEmbedded: true, // 需要嵌入式应用配置
-      requireOnline: true
-    },
-    component: Layout,
-    children: [
-      {
-        path: '',
-        name: 'embedded',
-        component: EmbeddedPage
-      }
-    ]
-  },
+  // {
+  //   path: '/advanced',
+  //   component: Layout,
+  //   meta: {
+  //     title: '高级小助手',
+  //     icon: 'DataLine',
+  //     requireAdvancedAssistant: true,
+  //     requireOnline: true
+  //   },
+  //   children: [
+  //     {
+  //       path: 'float',
+  //       name: 'advancedFloat',
+  //       meta: {
+  //         title: '浮窗嵌入'
+  //       },
+  //       component: AdvancedFloatPage
+  //     },
+  //     {
+  //       path: 'full',
+  //       name: 'advancedFull',
+  //       meta: {
+  //         title: '全屏嵌入'
+  //       },
+  //       component: AdvancedFullPage
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/embedded',
+  //   meta: {
+  //     title: '页面嵌入',
+  //     icon: 'House',
+  //     requireEmbedded: true, // 需要嵌入式应用配置
+  //     requireOnline: true
+  //   },
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: '',
+  //       name: 'embedded',
+  //       component: EmbeddedPage
+  //     }
+  //   ]
+  // },
   {
     path: '/setting',
     component: Layout,

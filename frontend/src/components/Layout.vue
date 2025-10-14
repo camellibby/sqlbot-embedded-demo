@@ -173,9 +173,9 @@ const handleCommand = async (command: string) => {
 }
 
 .logo img {
-  height: 32px;
+  height: 50px;
   width: auto;
-  margin-right: 12px;
+  margin-right: 5px;
 }
 
 .logo h1 {

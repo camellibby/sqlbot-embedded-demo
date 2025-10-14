@@ -1,7 +1,7 @@
 <template>
   <div class="float-page base-float-page">
-    <Inactivate :font-color="inactivateFontColor" @show-history="showHistory" @new-chat="newChat" class="inactivate-container" />
-    <img src="/business.png">
+<!--    <Inactivate :font-color="inactivateFontColor" @show-history="showHistory" @new-chat="newChat" class="inactivate-container" />-->
+<!--    <img src="/business.png">-->
   </div>
 </template>
 <script setup lang="ts">
