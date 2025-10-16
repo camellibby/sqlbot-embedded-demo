@@ -141,10 +141,10 @@ const setupRouter = async () => {
   userStore.init()
   if (!settingStore.getLoaded) {
     await settingStore.init()
-    const accessRoutes = filterAsyncRoutes(asyncRoutes)
-    accessRoutes.forEach(route => {
-      router.addRoute(route)
-    })
+    // const accessRoutes = filterAsyncRoutes(asyncRoutes)
+    // accessRoutes.forEach(route => {
+    //   router.addRoute(route)
+    // })
   }
 }
 
