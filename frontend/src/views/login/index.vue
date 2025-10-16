@@ -9,7 +9,7 @@ const userStore = useUserStore()
 const formRef = ref<FormInstance>()
 
 const loginForm = reactive({
-  username: 'developer',
+  username: 'admin',
   password: 'SQLBotDemo@123'
 })
 const userNameText = computed(() => user_list.map(item => item.account).join(','))
@@ -27,7 +27,7 @@ const rules: FormRules = {
 
 const handleLogin = async (formEl: FormInstance | undefined) => {
   if (!formEl) return
-  
+
   await formEl.validate((valid) => {
     if (valid) {
       userStore.login(loginForm.username, loginForm.password)
@@ -54,7 +54,7 @@ const handleLogin = async (formEl: FormInstance | undefined) => {
             prefix-icon="User"
           />
         </el-form-item>
-        
+
         <el-form-item prop="password">
           <el-input
             v-model="loginForm.password"
@@ -69,19 +69,19 @@ const handleLogin = async (formEl: FormInstance | undefined) => {
           <el-button
             type="primary"
             class="login-button"
-            size="large" 
+            size="large"
             @click="handleLogin(formRef)"
           >
             登录
           </el-button>
         </el-form-item>
       </el-form>
-      <div class="login-tips">
-        <span>{{ `可选用户[${userNameText}]` }}</span>
-        <span>{{ `固定密码[${fixed_pwd}]` }}</span>
-      </div>
+<!--      <div class="login-tips">-->
+<!--        <span>{{ `可选用户[${userNameText}]` }}</span>-->
+<!--        <span>{{ `固定密码[${fixed_pwd}]` }}</span>-->
+<!--      </div>-->
     </div>
-    
+
   </div>
 </template>
 
