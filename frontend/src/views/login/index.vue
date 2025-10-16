@@ -9,8 +9,8 @@ const userStore = useUserStore()
 const formRef = ref<FormInstance>()
 
 const loginForm = reactive({
-  username: 'admin',
-  password: 'SQLBotDemo@123'
+  username: '',
+  password: ''
 })
 const userNameText = computed(() => user_list.map(item => item.account).join(','))
 
