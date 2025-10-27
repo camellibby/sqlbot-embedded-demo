@@ -51,7 +51,7 @@ const handleCommand = async (command: string) => {
         <div class="header-content">
           <div class="logo">
             <img src="/logo.png" alt="Logo" />
-            <h1>武汉理工产业集团智能助手</h1>
+            <h1>武汉理工产业集团智能体</h1>
           </div>
           <div class="menu-section">
             <el-menu
